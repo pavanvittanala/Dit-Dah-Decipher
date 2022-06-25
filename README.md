@@ -1,17 +1,4 @@
-# Dit-Dat-Decipher
-More Code Detection Using Eye Blinks with OpenCV
-
-
-
-For shape_predictor.dat file, please go through this link <br>
-https://github.com/tzutalin/dlib-android/blob/master/data/shape_predictor_68_face_landmarks.dat
-
-
-<!DOCTYPE html>
-<html>
 <head>
-    <meta charset="utf-8">
-    <title>Home</title>
     <style type="text/css">
          * {
   margin: 0;
@@ -71,7 +58,16 @@ button {
 
    </style>
 </head>
-<body>
+
+# Dit-Dat-Decipher
+More Code Detection Using Eye Blinks with OpenCV
+
+
+
+For shape_predictor.dat file, please go through this link <br>
+https://github.com/tzutalin/dlib-android/blob/master/data/shape_predictor_68_face_landmarks.dat
+
+
 
 
 <div class="wrapper">
@@ -84,5 +80,3 @@ button {
     </div>
 </div>
 
-</body>
-</html>
