@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title> Morse Translated</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style type="text/css">
+
+
+
+body {
+  margin:0px;
+  font-family:'Roboto';
+  text-align:center;
+}
+
+#container {
+  color:#999;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  padding-top:200px;
+  position:fixed;
+  width:100%;
+  bottom:45%;
+  display:block;
+}
+button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  color: black;
+  background-color: #fff200;
+  padding: 20px 30px;
+  margin: 50px 5px 0;
+  border: none;
+  cursor: pointer;
+}
+
+    </style>
+    <script type="text/javascript">
+$(document).ready(function () {
+   speakText();
+});
+        function speakText() {
+       $.ajax({
+  type: "POST",
+  url: "/speakMorse",
+  data: JSON.stringify([{"server_data":1}]),
+  contentType: "application/json",
+  dataType: 'json'
+    });
+    }
+</script>
+</head>
+<body >
+
+<div id=container>
+    The Decoded MORSE CODE :
+    {% for word in sentences %}
+            {{ word }}
+    {% endfor %}
+</div>
+
+<button type="button" onclick="window.location.href='./';">Go To Home Page</button>
+</body>
+
+
+
+</html>

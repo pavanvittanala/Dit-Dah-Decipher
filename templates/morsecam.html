@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Communicate</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style1.css') }}">
+     <script src="{{ url_for('static',filename='js/script.js') }}"> </script>
+
+    <style type="text/css">
+            .wrapper {
+          width: auto;
+          height: 100vh;
+          background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://wallpapercave.com/wp/wp5048659.png");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          backdrop-filter: opacity(80%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .cam
+        {
+          width: 50%;
+          height: 50vh;
+          margin: 80px 40px;
+          box-shadow: 0 0 45px rgba(19, 10, 0, 0.5);
+          background: rgba(19, 35, 47, 0.9);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        button {
+          font-size: 1.5rem;
+          font-weight: 600;
+          letter-spacing: 0.15rem;
+          color: white;
+          background-color: #00ffee;
+          padding: 20px 40px;
+          margin: 40px 10px 0;
+          border: none;
+          cursor: pointer;
+        }
+
+    </style>
+</head>
+<body onload="alertUser()">
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+<div class="cam">
+    <img width="100%" src="{{ url_for('video_feed') }}">
+</div>
+    <br>
+<!--<div class = "button">-->
+    <button type="button" onclick="window.location.href='./morsedecode';"> DECIPHER </button>
+<!--</div>-->
+</div>
+
+<!-- /form -->
+<!-- partial -->
+ <script src="{{ url_for('static',filename='js/jquery-ui.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/script.js') }}"> </script>
+<script>
+function alertUser() {
+  swal("Try messaging with morse code","Camera will start","success);
+<!--  return true;-->
+}
+</script>
+
+</body>
+</html>
